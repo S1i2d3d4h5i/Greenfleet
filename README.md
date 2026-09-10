@@ -4,10 +4,22 @@
 
 <p align="center">
 
-**[ 🚀 LIVE DEMO ]** &nbsp;&nbsp;
-**[ 💻 GITHUB ]** &nbsp;&nbsp;
-**[ 🏆 SMART INDIA HACKATHON 2026 ]** &nbsp;&nbsp;
-**[ 🌱 CLEAN & GREEN TECHNOLOGY ]**
+<a href="YOUR_WEBSITE_URL">
+  🚀 LIVE DEMO
+</a>
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://github.com/S1i2d3d4h5i/Greenfleet">
+  💻 GITHUB
+</a>
+&nbsp;&nbsp;&nbsp;
+
+<a href="https://www.sih.gov.in/">
+  🏆 SMART INDIA HACKATHON 2026
+</a>
+&nbsp;&nbsp;&nbsp;
+
+🌱 CLEAN & GREEN TECHNOLOGY
 
 </p>
 
