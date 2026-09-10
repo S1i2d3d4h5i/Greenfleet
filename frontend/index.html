@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>GreenFleet | Maritime Fleet Management</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ============================================================
+     TOP BAR
+     ============================================================ -->
+
+<header class="topbar">
+
+    <div class="logo">
+
+        <span>GF</span>
+
+        <div>
+
+            <h2>GreenFleet</h2>
+
+            <p>Maritime Fleet Management</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="user-area">
+
+        <span>SIH 2026 Prototype</span>
+
+        <div class="user-circle">
+            G
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<div class="layout">
+
+
+<!-- ============================================================
+     SIDEBAR
+     ============================================================ -->
+
+<aside class="sidebar">
+
+    <div class="menu-title">
+        MAIN MENU
+    </div>
+
+
+    <button class="menu active"
+            onclick="showPage('dashboard')">
+
+        Dashboard
+
+    </button>
+
+
+    <button class="menu"
+            onclick="showPage('vessels')">
+
+        Vessels
+
+    </button>
+
+
+    <button class="menu"
+            onclick="showPage('prediction')">
+
+        Fuel Prediction
+
+    </button>
+
+
+    <button class="menu"
+            onclick="showPage('optimization')">
+
+        Fleet Optimization
+
+    </button>
+
+
+    <button class="menu"
+            onclick="showPage('scenarios')">
+
+        Fuel Scenarios
+
+    </button>
+
+
+    <div class="menu-title second">
+
+        ANALYSIS
+
+    </div>
+
+
+    <button class="menu"
+            onclick="showPage('reports')">
+
+        Reports
+
+    </button>
+
+</aside>
+
+
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+
+<main class="content">
+
+
+
+<!-- ============================================================
+     DASHBOARD
+     ============================================================ -->
+
+<section id="dashboard"
+         class="page active-page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Fleet Overview
+            </h1>
+
+            <p>
+                Monitor vessel operations and environmental performance.
+            </p>
+
+        </div>
+
+
+        <button class="primary-btn"
+                onclick="showPage('optimization')">
+
+            Optimize Fleet
+
+        </button>
+
+    </div>
+
+
+
+    <!-- DASHBOARD CARDS -->
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="card-label">
+                TOTAL VESSELS
+            </div>
+
+            <div class="card-value">
+                24
+            </div>
+
+            <div class="card-small">
+                Fleet registered
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-label">
+                ACTIVE VESSELS
+            </div>
+
+            <div class="card-value">
+                18
+            </div>
+
+            <div class="card-small">
+                Currently operating
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-label">
+                FUEL CONSUMPTION
+            </div>
+
+            <div class="stat-value"
+                 id="dashboardFuel">
+
+                428.6 tonnes/month
+
+            </div>
+
+            <div class="card-small">
+                Latest calculated value
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-label">
+                CO₂ EMISSIONS
+            </div>
+
+            <div class="card-value"
+                 id="dashboardCO2">
+
+                1,324
+
+            </div>
+
+            <div class="card-small">
+                Latest estimated value
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ========================================================
+         DASHBOARD GRID
+         ======================================================== -->
+
+    <div class="dashboard-grid">
+
+
+        <!-- FLEET STATUS -->
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <h3>
+                    Fleet Status
+                </h3>
+
+                <span class="status-live">
+                    ● Live Data
+                </span>
+
+            </div>
+
+
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>
+                            Vessel
+                        </th>
+
+                        <th>
+                            Type
+                        </th>
+
+                        <th>
+                            Fuel
+                        </th>
+
+                        <th>
+                            Status
+                        </th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>
+                            MV Ocean Star
+                        </td>
+
+                        <td>
+                            Container
+                        </td>
+
+                        <td>
+                            Diesel
+                        </td>
+
+                        <td>
+
+                            <span class="badge active">
+                                Active
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>
+                            MV Blue Wave
+                        </td>
+
+                        <td>
+                            Bulk Carrier
+                        </td>
+
+                        <td>
+                            LNG
+                        </td>
+
+                        <td>
+
+                            <span class="badge active">
+                                Active
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>
+                            MV Sea Pearl
+                        </td>
+
+                        <td>
+                            Tanker
+                        </td>
+
+                        <td>
+                            Methanol
+                        </td>
+
+                        <td>
+
+                            <span class="badge idle">
+                                Idle
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+
+                    <tr>
+
+                        <td>
+                            MV Horizon
+                        </td>
+
+                        <td>
+                            Container
+                        </td>
+
+                        <td>
+                            Diesel
+                        </td>
+
+                        <td>
+
+                            <span class="badge active">
+                                Active
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <!-- ENVIRONMENTAL PERFORMANCE -->
+
+        <div class="panel">
+
+            <div class="panel-header">
+
+                <h3>
+                    Environmental Performance
+                </h3>
+
+            </div>
+
+
+
+            <div class="progress-item">
+
+                <div>
+
+                    <span>
+                        Fuel Efficiency
+                    </span>
+
+                    <strong>
+                        78%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div style="width:78%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="progress-item">
+
+                <div>
+
+                    <span>
+                        Emission Target
+                    </span>
+
+                    <strong>
+                        64%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div style="width:64%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="progress-item">
+
+                <div>
+
+                    <span>
+                        Fleet Utilization
+                    </span>
+
+                    <strong>
+                        83%
+                    </strong>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div style="width:83%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ========================================================
+         LATEST OPTIMIZATION
+         ======================================================== -->
+
+    <div class="panel optimization-summary">
+
+
+        <div>
+
+            <h3>
+                Latest Optimization
+            </h3>
+
+            <p>
+                Results from the latest quantum-inspired
+                fleet optimization.
+            </p>
+
+        </div>
+
+
+
+        <div class="saving">
+
+            <strong id="fuelSaving">
+                12.8%
+            </strong>
+
+            <span>
+                Estimated fuel reduction
+            </span>
+
+        </div>
+
+
+
+        <div class="saving">
+
+            <strong id="emissionSaving">
+                9.4%
+            </strong>
+
+            <span>
+                Estimated CO₂ reduction
+            </span>
+
+        </div>
+
+
+
+        <div class="saving">
+
+            <strong id="optimizationMethod">
+                QI
+            </strong>
+
+            <span>
+                Optimization method
+            </span>
+
+        </div>
+
+
+
+        <button class="outline-btn"
+                onclick="showPage('optimization')">
+
+            View Results
+
+        </button>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ============================================================
+     VESSEL MANAGEMENT
+     ============================================================ -->
+
+<section id="vessels"
+         class="page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Vessel Management
+            </h1>
+
+            <p>
+                View and manage the available maritime fleet.
+            </p>
+
+        </div>
+
+
+        <button class="primary-btn"
+                onclick="showPage('prediction')">
+
+            Analyze Vessel
+
+        </button>
+
+    </div>
+
+
+
+    <div class="panel">
+
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>
+                        Vessel ID
+                    </th>
+
+                    <th>
+                        Vessel Name
+                    </th>
+
+                    <th>
+                        Type
+                    </th>
+
+                    <th>
+                        Capacity
+                    </th>
+
+                    <th>
+                        Fuel Type
+                    </th>
+
+                    <th>
+                        Speed
+                    </th>
+
+                    <th>
+                        Status
+                    </th>
+
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+
+                <tr>
+
+                    <td>
+                        V001
+                    </td>
+
+                    <td>
+                        MV Ocean Star
+                    </td>
+
+                    <td>
+                        Container
+                    </td>
+
+                    <td>
+                        5000 TEU
+                    </td>
+
+                    <td>
+                        Diesel
+                    </td>
+
+                    <td>
+                        18 knots
+                    </td>
+
+                    <td>
+
+                        <span class="badge active">
+                            Active
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        V002
+                    </td>
+
+                    <td>
+                        MV Blue Wave
+                    </td>
+
+                    <td>
+                        Bulk Carrier
+                    </td>
+
+                    <td>
+                        42000 DWT
+                    </td>
+
+                    <td>
+                        LNG
+                    </td>
+
+                    <td>
+                        15 knots
+                    </td>
+
+                    <td>
+
+                        <span class="badge active">
+                            Active
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+
+                <tr>
+
+                    <td>
+                        V003
+                    </td>
+
+                    <td>
+                        MV Sea Pearl
+                    </td>
+
+                    <td>
+                        Tanker
+                    </td>
+
+                    <td>
+                        30000 DWT
+                    </td>
+
+                    <td>
+                        Methanol
+                    </td>
+
+                    <td>
+                        14 knots
+                    </td>
+
+                    <td>
+
+                        <span class="badge idle">
+                            Idle
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ============================================================
+     FUEL PREDICTION
+     ============================================================ -->
+
+<section id="prediction"
+         class="page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Fuel Consumption Prediction
+            </h1>
+
+            <p>
+                Estimate fuel consumption using vessel
+                operating conditions and the trained ML model.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="form-panel">
+
+
+        <div class="input-group">
+
+            <label>
+                Vessel Type
+            </label>
+
+            <select id="vesselType">
+
+                <option value="Container">
+                    Container
+                </option>
+
+                <option value="Bulk Carrier">
+                    Bulk Carrier
+                </option>
+
+                <option value="Tanker">
+                    Tanker
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Fuel Type
+            </label>
+
+            <select id="fuelType">
+
+                <option value="Diesel">
+                    Diesel
+                </option>
+
+                <option value="LNG">
+                    LNG
+                </option>
+
+                <option value="Methanol">
+                    Methanol
+                </option>
+
+                <option value="Hydrogen">
+                    Hydrogen
+                </option>
+
+                <option value="Ammonia">
+                    Ammonia
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Distance (km)
+            </label>
+
+            <input type="number"
+                   id="distance"
+                   value="1000"
+                   min="1">
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Cruising Speed (knots)
+            </label>
+
+            <input type="number"
+                   id="speed"
+                   value="15"
+                   min="1">
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Cargo Load (tonnes)
+            </label>
+
+            <input type="number"
+                   id="load"
+                   value="8000"
+                   min="1">
+
+        </div>
+
+
+
+        <button class="primary-btn"
+                onclick="predictFuel()">
+
+            Predict Consumption
+
+        </button>
+
+    </div>
+
+
+
+    <div id="predictionResult"
+         class="result-box">
+
+        Enter operating conditions and run the prediction.
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ============================================================
+     FLEET OPTIMIZATION
+     ============================================================ -->
+
+<section id="optimization"
+         class="page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Fleet Optimization
+            </h1>
+
+            <p>
+                Find a suitable fleet configuration while
+                balancing fuel, emissions, cargo capacity and speed.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="form-panel">
+
+
+        <div class="input-group">
+
+            <label>
+                Cargo Demand (tonnes)
+            </label>
+
+            <input type="number"
+                   id="cargo"
+                   value="25000"
+                   min="1">
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Maximum Speed (knots)
+            </label>
+
+            <input type="number"
+                   id="maxSpeed"
+                   value="18"
+                   min="12"
+                   max="20">
+
+        </div>
+
+
+
+        <div class="input-group">
+
+            <label>
+                Preferred Fuel
+            </label>
+
+            <select id="fuel">
+
+                <option value="Any">
+                    Any
+                </option>
+
+                <option value="LNG">
+                    LNG
+                </option>
+
+                <option value="Methanol">
+                    Methanol
+                </option>
+
+                <option value="Hydrogen">
+                    Hydrogen
+                </option>
+
+                <option value="Ammonia">
+                    Ammonia
+                </option>
+
+            </select>
+
+        </div>
+
+
+
+        <button class="primary-btn"
+                onclick="optimizeFleet()">
+
+            Run Optimization
+
+        </button>
+
+    </div>
+
+
+
+    <div id="optimizationResult"
+         class="optimization-result">
+
+
+        <h3>
+            Optimization Result
+        </h3>
+
+        <p>
+            Enter the cargo requirement and run the
+            quantum-inspired optimizer.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ============================================================
+     FUEL SCENARIOS
+     ============================================================ -->
+
+<section id="scenarios"
+         class="page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Fuel Scenarios
+            </h1>
+
+            <p>
+                Compare alternative fuel options for maritime operations.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="scenario-grid">
+
+
+        <div class="scenario"
+             data-fuel="Diesel"
+             data-base-fuel="10"
+             onclick="runFuelScenario('Diesel', 10)">
+
+            <h3>
+                Diesel
+            </h3>
+
+            <p>
+                Conventional marine fuel
+            </p>
+
+            <strong>
+                Baseline
+            </strong>
+
+        </div>
+
+
+
+        <div class="scenario"
+             data-fuel="LNG"
+             data-base-fuel="10"
+             onclick="runFuelScenario('LNG', 10)">
+
+            <h3>
+                LNG
+            </h3>
+
+            <p>
+                Lower-emission transition fuel
+            </p>
+
+            <strong>
+                Reduced emissions
+            </strong>
+
+        </div>
+
+
+
+        <div class="scenario"
+             data-fuel="Methanol"
+             data-base-fuel="10"
+             onclick="runFuelScenario('Methanol', 10)">
+
+            <h3>
+                Methanol
+            </h3>
+
+            <p>
+                Alternative marine fuel
+            </p>
+
+            <strong>
+                Medium reduction
+            </strong>
+
+        </div>
+
+
+
+        <div class="scenario"
+             data-fuel="Hydrogen"
+             data-base-fuel="10"
+             onclick="runFuelScenario('Hydrogen', 10)">
+
+            <h3>
+                Hydrogen
+            </h3>
+
+            <p>
+                Low-carbon fuel option
+            </p>
+
+            <strong>
+                High potential
+            </strong>
+
+        </div>
+
+
+
+        <div class="scenario"
+             data-fuel="Ammonia"
+             data-base-fuel="10"
+             onclick="runFuelScenario('Ammonia', 10)">
+
+            <h3>
+                Ammonia
+            </h3>
+
+            <p>
+                Emerging alternative fuel
+            </p>
+
+            <strong>
+                Zero-carbon potential
+            </strong>
+
+        </div>
+
+
+
+        <div class="scenario"
+             data-fuel="Shore Power"
+             data-base-fuel="10"
+             onclick="runFuelScenario('Shore Power', 10)">
+
+            <h3>
+                Shore Power
+            </h3>
+
+            <p>
+                Reduce emissions while berthed
+            </p>
+
+            <strong>
+                Port-side solution
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SCENARIO RESULT -->
+
+    <div id="scenarioResult"
+         class="result-box"
+         style="margin-top:25px;">
+
+
+        <h3>
+            Fuel Scenario Analysis
+        </h3>
+
+        <p>
+            Select a fuel option above to view its
+            estimated fuel consumption and emissions.
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ============================================================
+     REPORTS
+     ============================================================ -->
+
+<section id="reports"
+         class="page">
+
+
+    <div class="page-heading">
+
+        <div>
+
+            <h1>
+                Reports
+            </h1>
+
+            <p>
+                Summary of fleet performance and
+                optimization results.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- REPORT SUMMARY CARDS -->
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="card-label">
+                FUEL CONSUMPTION
+            </div>
+
+            <div class="card-value"
+                 id="reportFuel">
+
+                428.6
+
+            </div>
+
+            <div class="card-small">
+                tonnes / month
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-label">
+                CO₂ EMISSIONS
+            </div>
+
+            <div class="card-value"
+                 id="reportCO2">
+
+                1,324
+
+            </div>
+
+            <div class="card-small">
+                tonnes / month
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-label">
+                FUEL SAVING
+            </div>
+
+            <div class="card-value"
+                 id="reportFuelSaving">
+
+                12.8%
+
+            </div>
+
+            <div class="card-small">
+                Optimization estimate
+            </div>
+
+        </div>
+
+
+
+        <div class="card">
+
+            <div class="card-label">
+                EMISSION REDUCTION
+            </div>
+
+            <div class="card-value"
+                 id="reportEmissionSaving">
+
+                9.4%
+
+            </div>
+
+            <div class="card-small">
+                Optimization estimate
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- DETAILED REPORT -->
+
+        <!-- FUEL & EMISSIONS COMPARISON -->
+
+    <div class="panel comparison-panel">
+
+        <h3>
+            Fuel & Emissions Comparison
+        </h3>
+
+        <p class="comparison-subtitle">
+            Comparison between conventional fleet operation
+            and the GreenFleet optimized solution.
+        </p>
+
+        <div class="comparison-chart">
+
+            <div class="comparison-item">
+
+                <div class="comparison-label">
+                    <span>Conventional Fuel</span>
+                    <strong id="chartConventionalFuel">
+                        2.64 tonnes
+                    </strong>
+                </div>
+
+                <div class="bar-background">
+                    <div
+                        class="bar conventional-bar"
+                        id="conventionalFuelBar"
+                        style="width:100%;">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="comparison-item">
+
+                <div class="comparison-label">
+                    <span>Optimized Fuel</span>
+                    <strong id="chartOptimizedFuel">
+                        1.01 tonnes
+                    </strong>
+                </div>
+
+                <div class="bar-background">
+                    <div
+                        class="bar optimized-bar"
+                        id="optimizedFuelBar"
+                        style="width:38%;">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="comparison-item">
+
+                <div class="comparison-label">
+                    <span>Conventional Emissions</span>
+                    <strong id="chartConventionalEmissions">
+                        1.85 tonnes
+                    </strong>
+                </div>
+
+                <div class="bar-background">
+                    <div
+                        class="bar conventional-emission-bar"
+                        id="conventionalEmissionBar"
+                        style="width:100%;">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="comparison-item">
+
+                <div class="comparison-label">
+                    <span>Optimized Emissions</span>
+                    <strong id="chartOptimizedEmissions">
+                        0.71 tonnes
+                    </strong>
+                </div>
+
+                <div class="bar-background">
+                    <div
+                        class="bar optimized-emission-bar"
+                        id="optimizedEmissionBar"
+                        style="width:38%;">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="panel report-panel">
+
+
+        <h3>
+            Current Fleet Performance
+        </h3>
+
+
+
+        <div class="report-row">
+
+            <span>
+                Monthly fuel consumption
+            </span>
+
+            <strong id="reportFuelDetail">
+                428.6 tonnes
+            </strong>
+
+        </div>
+
+
+
+        <div class="report-row">
+
+            <span>
+                Monthly CO₂ emissions
+            </span>
+
+            <strong id="reportCO2Detail">
+                1,324 tonnes
+            </strong>
+
+        </div>
+
+
+
+        <div class="report-row">
+
+            <span>
+                Fleet utilization
+            </span>
+
+            <strong>
+                83%
+            </strong>
+
+        </div>
+
+
+
+        <div class="report-row">
+
+            <span>
+                Optimization potential
+            </span>
+
+            <strong id="reportOptimization">
+                12.8%
+            </strong>
+
+        </div>
+
+
+
+        <div class="report-row">
+
+            <span>
+                Optimization method
+            </span>
+
+            <strong id="reportMethod">
+                Quantum-Inspired Optimization
+            </strong>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- SYSTEM INFORMATION -->
+
+    <div class="panel"
+         style="margin-top:20px;">
+
+
+        <h3>
+            GreenFleet Analysis Engine
+        </h3>
+
+
+        <p>
+            GreenFleet combines machine-learning based
+            fuel prediction with a quantum-inspired
+            optimization approach to evaluate fleet
+            configurations, alternative fuels and
+            environmental performance.
+        </p>
+
+
+        <p style="margin-top:10px;">
+
+            <strong>
+                Prototype status:
+            </strong>
+
+            <span class="status-live">
+                ● Operational
+            </span>
+
+        </p>
+
+
+    </div>
+
+
+</section>
+
+
+
+</main>
+
+</div>
+
+
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+vessel_type,fuel_type,distance_km,speed_knots,cargo_load_tonnes,fuel_consumption_tonnes
+Container,Diesel,500,18,8000,42.5
+Container,Diesel,750,20,10000,68.2
+Container,Diesel,1000,22,12000,101.5
+Container,LNG,500,18,8000,36.8
+Container,LNG,750,20,10000,57.4
+Container,LNG,1000,22,12000,85.3
+Bulk Carrier,Diesel,600,16,15000,48.6
+Bulk Carrier,Diesel,900,18,18000,76.5
+Bulk Carrier,Diesel,1200,20,22000,112.8
+Bulk Carrier,LNG,600,16,15000,42.1
+Bulk Carrier,LNG,900,18,18000,65.7
+Bulk Carrier,LNG,1200,20,22000,96.4
+Tanker,Diesel,500,15,20000,51.3
+Tanker,Diesel,800,17,25000,84.6
+Tanker,Diesel,1100,19,30000,125.7
+Tanker,Methanol,500,15,20000,44.2
+Tanker,Methanol,800,17,25000,72.5
+Tanker,Methanol,1100,19,30000,107.3
+Container,Methanol,600,19,9000,45.6
+Container,Methanol,900,21,11000,70.8
+Bulk Carrier,Ammonia,700,17,17000,49.5
+Bulk Carrier,Ammonia,1000,19,21000,72.6
+Tanker,Hydrogen,600,16,22000,38.9
+Tanker,Hydrogen,900,18,27000,57.2
