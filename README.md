@@ -2,304 +2,154 @@
 
 > **Smart • Sustainable • Efficient Maritime Transportation**
 
-Greenfleet is an AI-powered maritime fleet management and voyage optimization platform designed to help shipping companies reduce fuel consumption, lower carbon emissions, and improve overall fleet efficiency.
+<p align="center">
 
-The platform combines **AI/ML-based fuel prediction**, **voyage optimization**, and **fleet monitoring** to provide data-driven recommendations for greener maritime transportation.
+**[ 🚀 LIVE DEMO ]** &nbsp;&nbsp;
+**[ 💻 GITHUB ]** &nbsp;&nbsp;
+**[ 🏆 SMART INDIA HACKATHON 2026 ]** &nbsp;&nbsp;
+**[ 🌱 CLEAN & GREEN TECHNOLOGY ]**
+
+</p>
+
+<p align="center">
+
+**AI + Optimization** &nbsp; | &nbsp;
+**Python** &nbsp; | &nbsp;
+**Flask** &nbsp; | &nbsp;
+**JavaScript** &nbsp; | &nbsp;
+**HTML5** &nbsp; | &nbsp;
+**CSS3**
+
+</p>
 
 ---
 
-## 🌱 Problem Statement
+## 🌊 Project Overview
 
-Maritime transportation consumes large amounts of fuel and contributes significantly to global greenhouse gas emissions.
+**Greenfleet** is an AI-powered maritime fleet management and optimization platform designed to improve vessel efficiency, reduce fuel consumption, and minimize greenhouse-gas emissions.
 
-Fleet operators need to balance:
+The system combines **AI/ML-based fuel prediction** with an **optimization engine** to analyze vessel and fuel parameters and recommend efficient operating conditions.
 
-* Fuel consumption
-* Vessel speed
-* Cargo capacity
-* Voyage efficiency
-* Operational cost
-* Environmental impact
+> **Predict → Optimize → Reduce Fuel → Reduce Emissions**
 
-Greenfleet addresses this challenge by using intelligent optimization techniques to recommend more fuel-efficient and environmentally friendly operating conditions.
+---
+
+## 🏆 Project Information
+
+| Category | Details |
+|---|---|
+| 🏆 Hackathon | Smart India Hackathon 2026 |
+| 💡 Project | Greenfleet |
+| 🧠 Domain | AI + Optimization |
+| 🌱 Theme | Clean & Green Technology |
+| 🚢 Application | Maritime Fleet Management |
+| 👥 Team | To be added |
+
+---
+
+## 🎯 Problem Statement
+
+Maritime transportation requires large amounts of fuel and contributes significantly to greenhouse-gas emissions.
+
+Fleet operators need to balance several factors such as:
+
+- Vessel type
+- Cargo capacity
+- Fuel type
+- Vessel speed
+- Fuel consumption
+- Operational efficiency
+- Environmental impact
+
+Traditional decision-making can make it difficult to identify the most efficient combination of these parameters.
+
+**Greenfleet addresses this challenge by using AI-based prediction and optimization to support data-driven maritime fleet decisions.**
 
 ---
 
 ## 💡 Our Solution
 
-Greenfleet provides a centralized dashboard where users can enter vessel and fuel information and receive optimized recommendations.
+Greenfleet provides a centralized dashboard where users can enter vessel and fuel information.
 
-The system analyzes vessel parameters and generates:
+The system then:
 
-* Recommended vessel configuration
-* Suitable fuel type
-* Recommended operating speed
-* Estimated fuel consumption
-* Estimated emissions
-* Optimization score
+1. Collects vessel and operational parameters.
+2. Uses an AI/ML model to estimate fuel consumption.
+3. Evaluates possible operating configurations.
+4. Calculates estimated emissions.
+5. Generates an optimization score.
+6. Recommends an efficient operating configuration.
 
-This allows fleet operators to make better operational decisions while reducing unnecessary fuel usage and emissions.
+This helps fleet operators make decisions that can improve **fuel efficiency and environmental sustainability**.
 
 ---
 
-## ✨ Key Features
+# 🚀 Key Features
 
 ### 🚢 Fleet Management
 
-Manage vessel information including:
+Manage and analyze vessel information including:
 
-* Vessel type
-* Cargo capacity
-* Number of vessels
-* Fuel type
-* Operational parameters
+- Vessel type
+- Cargo capacity
+- Number of vessels
+- Fuel type
+- Operational parameters
 
-### 🤖 AI/ML Fuel Prediction
+### 🤖 AI Fuel Prediction
 
-The system uses a trained machine-learning model to estimate fuel requirements based on vessel and operational parameters.
+A trained machine-learning model predicts estimated fuel consumption using vessel and operational information.
 
-### ⚙️ Voyage Optimization
+### ⚙️ Fleet Optimization
 
-Greenfleet evaluates available vessel and fuel combinations and recommends an efficient configuration.
+The optimization engine evaluates available vessel and fuel combinations and generates an efficient recommendation.
 
-### 🌱 Emission Reduction
+### 🌱 Emission Estimation
 
-Estimated emissions help operators compare alternatives and select greener options.
+Greenfleet estimates emissions associated with the selected configuration, helping users understand its environmental impact.
 
 ### 📊 Interactive Dashboard
 
-The web dashboard provides an easy-to-understand interface for viewing fleet information and optimization results.
+A web-based dashboard provides a simple interface for entering data and viewing optimization results.
 
 ### 📈 Reports
 
-The reporting section summarizes fleet performance and optimization results.
+The reporting section provides a summary of fleet performance and optimization results.
 
 ---
 
-## 🧠 System Workflow
+# 🧠 AI + Optimization Workflow
 
 ```text
-             ┌─────────────────────┐
-             │   User Input         │
-             │ Vessel & Fuel Data   │
-             └──────────┬──────────┘
-                        │
-                        ▼
-             ┌─────────────────────┐
-             │   Fleet Database    │
-             │   vessels.csv       │
-             └──────────┬──────────┘
-                        │
-                        ▼
-             ┌─────────────────────┐
-             │ AI/ML Prediction    │
-             │ Fuel Consumption    │
-             └──────────┬──────────┘
-                        │
-                        ▼
-             ┌─────────────────────┐
-             │ Optimization Engine │
-             │ Speed / Fuel / Load │
-             └──────────┬──────────┘
-                        │
-                        ▼
-             ┌─────────────────────┐
-             │ Greenfleet Results  │
-             │ Fuel • Emissions    │
-             │ Speed • Score       │
-             └─────────────────────┘
-```
-
----
-
-## 🏗️ Project Structure
-
-```text
-Greenfleet/
-│
-├── backend/
-│   ├── app.py
-│   ├── database.py
-│   └── requirements.txt
-│
-├── data/
-│   └── vessels.csv
-│
-├── frontend/
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-│
-├── optimization/
-│   └── optimizer.py
-│
-├── prediction/
-│   ├── fuel_model.pkl
-│   └── fuel_prediction.py
-│
-├── .gitignore
-└── README.md
-```
-
----
-
-## 🛠️ Technologies Used
-
-### Frontend
-
-* HTML5
-* CSS3
-* JavaScript
-
-### Backend
-
-* Python
-* Flask
-* Flask-CORS
-
-### AI / ML
-
-* Python
-* Machine Learning
-* Trained fuel prediction model
-
-### Data & Optimization
-
-* CSV-based vessel dataset
-* Optimization algorithms
-* Fuel consumption estimation
-* Emission estimation
-
-### Development Tools
-
-* Visual Studio Code
-* Git
-* GitHub
-
----
-
-## ⚙️ Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/S1i2d3d4h5i/Greenfleet.git
-```
-
-### 2. Open the project
-
-```bash
-cd Greenfleet
-```
-
-### 3. Install Python dependencies
-
-```bash
-pip install -r backend/requirements.txt
-```
-
-### 4. Start the backend
-
-```bash
-python backend/app.py
-```
-
-The Flask backend should start on the configured local port.
-
-### 5. Open the frontend
-
-Open:
-
-```text
-frontend/index.html
-```
-
-in your browser.
-
----
-
-## 🚀 How It Works
-
-### Step 1 — Enter Vessel Details
-
-The user provides information such as:
-
-```text
-Vessel Type
-Fuel Type
-Number of Vessels
-Cargo Capacity
-```
-
-### Step 2 — Prediction
-
-The AI/ML model estimates the expected fuel requirement.
-
-### Step 3 — Optimization
-
-The optimization engine evaluates the available parameters and generates a recommended configuration.
-
-### Step 4 — Results
-
-The dashboard displays:
-
-```text
-Recommended Speed
-Estimated Fuel
-Estimated Emissions
-Optimization Score
-```
-
-### Step 5 — Decision Making
-
-The fleet operator can use the results to select a more efficient and environmentally responsible operating strategy.
-
----
-
-## 🌍 Environmental Impact
-
-Greenfleet aims to support sustainable maritime transportation by helping operators:
-
-* Reduce unnecessary fuel consumption
-* Reduce greenhouse-gas emissions
-* Improve vessel efficiency
-* Compare different fuel options
-* Make data-driven operational decisions
-
----
-
-## 📊 Future Scope
-
-Future versions of Greenfleet can include:
-
-* Real-time vessel tracking
-* Weather-aware route optimization
-* Live fuel-price integration
-* AIS data integration
-* Advanced deep-learning models
-* Carbon-credit estimation
-* Multi-vessel fleet optimization
-* Cloud deployment
-* Mobile application
-* Real-time emission monitoring
-* Predictive maintenance
-
----
-
-## 🏆 Smart India Hackathon
-
-Greenfleet is developed as a prototype for **Smart India Hackathon (SIH)**, focusing on the use of AI, data, and optimization techniques to address challenges in sustainable maritime transportation.
-
----
-
-## 👥 Team
-
-**Greenfleet Team**
-
-Developed as an academic and innovation project.
-
----
-
-## 📄 License
-
-This project is intended for educational, research, and prototype-development purposes.
+┌─────────────────────────┐
+│      User Input         │
+│ Vessel & Fuel Details   │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│    Vessel Database      │
+│     vessels.csv         │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│    AI/ML Prediction     │
+│  Fuel Consumption       │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│   Optimization Engine   │
+│ Speed • Fuel • Capacity │
+└────────────┬────────────┘
+             │
+             ▼
+┌─────────────────────────┐
+│    Greenfleet Results   │
+│                         │
+│ Fuel Consumption        │
+│ Estimated Emissions     │
+│ Recommended Speed       │
+│ Optimization Score      │
+└─────────────────────────┘
